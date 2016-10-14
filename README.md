@@ -1,2 +1,2 @@
 # Pebble.S.pinner
-Pushing pins
+Pushing pins.
