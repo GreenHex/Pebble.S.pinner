@@ -1,8 +1,10 @@
-// var timeline = require('./timeline');
+//var timeline = require('./timeline');
+
+var DEBUG = 1;
 var WU_API_KEY = "98e5c0ff5def9a01";
 var GEOLOOKUP_URL = "http://api.wunderground.com/api/" + WU_API_KEY + "/geolookup/q/{lat},{lon}.json";
 var ASTRONOMY_URL = "http://api.wunderground.com/api/" + WU_API_KEY + "/astronomy/q/{country}/{state}/{city}.json";
-var DEBUG = 1;
+
 
 function play() {
   var json;
@@ -18,9 +20,8 @@ function play() {
 function getAstroInfo() {
   var json;
   try {
-    if (DEBUG) json = JSON.parse( this.responseText );
-    console.log( JSON.stringify( json ) );
-    if (DEBUG) console.log( json.location.country_name + " " + json.location.state + " " + json.location.city );
+    json = JSON.parse( this.responseText );
+    if (DEBUG) console.log( JSON.stringify( json ) );
   } catch ( err ) {
     if (DEBUG) console.log( 'index.js: getAstroInfo(): Error parsing responseText, invalid JSON data.' );
     return;
@@ -34,10 +35,8 @@ function getAstroInfo() {
 }
 
 function getGeoInfo( pos ) {
-  if (DEBUG) console.log( "index.js: Got location: " + JSON.stringify( pos ) );
-  
   var url = GEOLOOKUP_URL.replace( "{lat}", pos.coords.latitude ).replace( "{lon}", pos.coords.longitude );
-  console.log( url );
+  if (DEBUG) console.log( url );
   
   var xhr = new XMLHttpRequest();
   xhr.onload = getAstroInfo;
@@ -67,11 +66,11 @@ Pebble.addEventListener( 'ready',
                         });
 
 // pin stuff
-Pebble.addEventListener('ready',
+Pebble.addEventListener( 'ready',
                         function() {
                           Pebble.getTimelineToken(function(token) {
-                            console.log('My timeline token is ' + token);
+                            if (DEBUG) console.log('My timeline token is ' + token);
                           }, function(error) {
-                            console.log('Error getting timeline token: ' + error);
+                            if (DEBUG) console.log('Error getting timeline token: ' + error);
                           });
 });
