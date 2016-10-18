@@ -58,7 +58,7 @@ void clock_init( Window *window ) {
   };
   unobstructed_area_service_subscribe( handler, window_layer );
 
-  tick_timer_service_subscribe( SECOND_UNIT, handle_clock_tick );
+  tick_timer_service_subscribe( MINUTE_UNIT, handle_clock_tick );
 
   time_t timeInSecs = time( NULL );
   tm_time = *localtime( &timeInSecs );
