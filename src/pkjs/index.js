@@ -1,10 +1,9 @@
-//var timeline = require('./timeline');
+var timeline = require('./timeline');
 
 var DEBUG = 1;
 var WU_API_KEY = "98e5c0ff5def9a01";
 var GEOLOOKUP_URL = "http://api.wunderground.com/api/" + WU_API_KEY + "/geolookup/q/{lat},{lon}.json";
 var ASTRONOMY_URL = "http://api.wunderground.com/api/" + WU_API_KEY + "/astronomy/q/{country}/{state}/{city}.json";
-
 
 function play() {
   var json;
@@ -15,6 +14,28 @@ function play() {
     if (DEBUG) console.log( 'index.js: play(): Error parsing responseText, invalid JSON data.' );
     return;
   }
+  var date = new Date();
+  var moonPin = {
+    "id": "moonphase-pin-98e5c0ff5def9a01-5",
+    "time": "2016-10-18T00:00:00.000Z", // date.toISOString(),
+    "layout": {
+      "type": "sportsPin",
+      "title": json.moon_phase.percentIlluminated + "%",
+      "subtitle": json.moon_phase.ageOfMoon + " days",
+      "body": json.moon_phase.phaseofMoon,
+      "tinyIcon": "system://images/TIMELINE_SUN",
+      "largeIcon": "system://images/TIMELINE_SUN",
+      "nameAway": "Rise",
+      "nameHome": "Set",
+      "recordAway": json.moon_phase.moonrise.hour + ":" + json.moon_phase.moonrise.minute,
+      "recordHome": json.moon_phase.moonset.hour + ":" + json.moon_phase.moonset.minute,
+      "sportsGameState": "pre-game"
+    }
+  };
+  if (DEBUG) console.log( "index.js: play(): " + JSON.stringify( moonPin ) );
+  timeline.insertUserPin( moonPin, function( responseText ) {
+    if (DEBUG) console.log( 'Result: ' + responseText );
+  });
 }
 
 function getAstroInfo() {
