@@ -6,7 +6,9 @@
     "pebble": {
         "displayName": "S.pinner",
         "enableMultiJS": true,
-        "messageKeys": [],
+        "messageKeys": [
+            "CURRENT_MOONPHASE_PIN_ID"
+        ],
         "projectType": "native",
         "resources": {
             "media": [

@@ -1,10 +1,11 @@
+var MESSAGE_KEYS = require( 'message_keys' );
 var timeline = require('./timeline');
 
 var DEBUG = 1;
 var WU_API_KEY = "98e5c0ff5def9a01";
-var WU_API_ROOT = "http://api.wunderground.com/api/";
-var GEOLOOKUP_URL = WU_API_ROOT + WU_API_KEY + "/geolookup/q/{lat},{lon}.json";
-var ASTRONOMY_URL = WU_API_ROOT + WU_API_KEY + "/astronomy/q/{country}/{state}/{city}.json";
+var WU_API_URL_ROOT = "http://api.wunderground.com/api/";
+var GEOLOOKUP_URL = WU_API_URL_ROOT + WU_API_KEY + "/geolookup/q/{lat},{lon}.json";
+var ASTRONOMY_URL = WU_API_URL_ROOT + WU_API_KEY + "/astronomy/q/{country}/{state}/{city}.json";
 
 var day = [ "th day", "st day", "nd day", "rd day" ];
 
@@ -17,6 +18,15 @@ function play() {
     if (DEBUG) console.log( 'index.js: play(): Error parsing responseText, invalid JSON data.' );
     return;
   }
+  
+  if ( localStorage.getItem( MESSAGE_KEYS.CURRENT_MOONPHASE_PIN_ID ) ) {
+    var pin = { "id": localStorage.getItem( MESSAGE_KEYS.CURRENT_MOONPHASE_PIN_ID ) };
+    if (DEBUG) console.log( JSON.stringify( pin ) );
+    timeline.deleteUserPin( pin, function( responseText ) {
+      if (DEBUG) console.log( 'deleteUserPin(): Result: ' + responseText );
+    });
+  }
+  
   var date = new Date();
   var dateMoonrise = new Date();
   var dateMoonset = new Date();
@@ -32,17 +42,17 @@ function play() {
   var moonRiseHour = ( json.moon_phase.moonrise.hour < 10 ) ? "0" + json.moon_phase.moonrise.hour : json.moon_phase.moonrise.hour;
   var moonSetHour = ( json.moon_phase.moonset.hour < 10 ) ? "0" + json.moon_phase.moonset.hour : json.moon_phase.moonset.hour;
   
-  var moonPin = {
-    "id": "moonphase-pin-98e5c0ff5def9a01-8",
+  var moonphasePin = {
+    "id": "moonphase-pin-id-" + date.getTime() + "-98e5c0ff5def9a01",
     "time": dateMoonrise.toISOString(),
     "duration" : duration,
     "layout": {
       "type": "sportsPin",
       "title": json.moon_phase.ageOfMoon + day[ ( json.moon_phase.ageOfMoon == 1 ) ? 1 : ( json.moon_phase.ageOfMoon ) == 2 ? 2 : ( json.moon_phase.ageOfMoon == 3 ) ? 3 : 0 ],
       "subtitle": json.moon_phase.phaseofMoon,
-      "body": json.moon_phase.percentIlluminated + "%",
-      "tinyIcon": "app://images/P_MP_S_01",
-      "largeIcon": "app://images/P_MP_L_14",
+      "body": json.moon_phase.percentIlluminated + "% Illumination",
+      "tinyIcon": "system://images/TIMELINE_SUN",
+      "largeIcon": "system://images/TIMELINE_SUN",
       "nameAway": "Rise",
       "nameHome": "Set",
       "recordAway": moonRiseHour + ":" + json.moon_phase.moonrise.minute,
@@ -52,9 +62,13 @@ function play() {
       "sportsGameState": "in-game"
     }
   };
-  if (DEBUG) console.log( "index.js: play(): " + JSON.stringify( moonPin ) );
-  timeline.insertUserPin( moonPin, function( responseText ) {
-    if (DEBUG) console.log( 'Result: ' + responseText );
+  
+  localStorage.setItem( MESSAGE_KEYS.CURRENT_MOONPHASE_PIN_ID, moonphasePin.id  );
+  
+  if (DEBUG) console.log( "index.js: play(): " + localStorage.getItem( MESSAGE_KEYS.CURRENT_MOONPHASE_PIN_ID ) );
+  
+  timeline.insertUserPin( moonphasePin, function( responseText ) {
+    if (DEBUG) console.log( 'insertUserPin(): Result: ' + responseText );
   });
 }
 
