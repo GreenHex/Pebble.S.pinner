@@ -9,13 +9,232 @@
         "messageKeys": [],
         "projectType": "native",
         "resources": {
-            "media": []
+            "media": [
+                {
+                    "file": "images/P_MP_S_29.png",
+                    "name": "P_MP_S_29",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_S_24.png",
+                    "name": "P_MP_S_24",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_S_23.png",
+                    "name": "P_MP_S_23",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_S_22.png",
+                    "name": "P_MP_S_22",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_S_16.png",
+                    "name": "P_MP_S_16",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_S_15.png",
+                    "name": "P_MP_S_15",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_S_14.png",
+                    "name": "P_MP_S_14",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_S_09.png",
+                    "name": "P_MP_S_09",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_S_08.png",
+                    "name": "P_MP_S_08",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_S_07.png",
+                    "menuIcon": true,
+                    "name": "P_MP_S_07",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_S_01.png",
+                    "name": "P_MP_S_01",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_S_00.png",
+                    "name": "P_MP_S_00",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_M_29.png",
+                    "name": "P_MP_M_29",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_M_24.png",
+                    "name": "P_MP_M_24",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_M_23.png",
+                    "name": "P_MP_M_23",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_M_22.png",
+                    "name": "P_MP_M_22",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_M_16.png",
+                    "name": "P_MP_M_16",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_M_15.png",
+                    "name": "P_MP_M_15",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_M_14.png",
+                    "name": "P_MP_M_14",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_M_09.png",
+                    "name": "P_MP_M_09",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_M_08.png",
+                    "name": "P_MP_M_08",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_M_07.png",
+                    "name": "P_MP_M_07",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_M_01.png",
+                    "name": "P_MP_M_01",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_M_00.png",
+                    "name": "P_MP_M_00",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_L_29.png",
+                    "name": "P_MP_L_29",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_L_24.png",
+                    "name": "P_MP_L_24",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_L_23.png",
+                    "name": "P_MP_L_23",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_L_22.png",
+                    "name": "P_MP_L_22",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_L_16.png",
+                    "name": "P_MP_L_16",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_L_15.png",
+                    "name": "P_MP_L_15",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_L_14.png",
+                    "name": "P_MP_L_14",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_L_09.png",
+                    "name": "P_MP_L_09",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_L_08.png",
+                    "name": "P_MP_L_08",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_L_07.png",
+                    "name": "P_MP_L_07",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_L_01.png",
+                    "name": "P_MP_L_01",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/P_MP_L_00.png",
+                    "name": "P_MP_L_00",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                }
+            ]
         },
         "sdkVersion": "3",
         "targetPlatforms": [
             "aplite",
             "basalt",
-            "diorite"
+            "diorite",
+            "emery"
         ],
         "uuid": "2c1d4327-f66c-4320-a654-345ca4609133",
         "watchapp": {
