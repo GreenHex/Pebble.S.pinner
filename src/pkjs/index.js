@@ -19,14 +19,6 @@ function play() {
     return;
   }
   
-  if ( localStorage.getItem( MESSAGE_KEYS.CURRENT_MOONPHASE_PIN_ID ) ) {
-    var pin = { "id": localStorage.getItem( MESSAGE_KEYS.CURRENT_MOONPHASE_PIN_ID ) };
-    if (DEBUG) console.log( JSON.stringify( pin ) );
-    timeline.deleteUserPin( pin, function( responseText ) {
-      if (DEBUG) console.log( 'deleteUserPin(): Result: ' + responseText );
-    });
-  }
-  
   var date = new Date();
   var dateMoonrise = new Date();
   var dateMoonset = new Date();
@@ -62,14 +54,19 @@ function play() {
       "sportsGameState": "in-game"
     }
   };
-  
-  localStorage.setItem( MESSAGE_KEYS.CURRENT_MOONPHASE_PIN_ID, moonphasePin.id  );
-  
-  if (DEBUG) console.log( "index.js: play(): " + localStorage.getItem( MESSAGE_KEYS.CURRENT_MOONPHASE_PIN_ID ) );
-  
-  timeline.insertUserPin( moonphasePin, function( responseText ) {
-    if (DEBUG) console.log( 'insertUserPin(): Result: ' + responseText );
-  });
+
+  // if ( localStorage.getItem( MESSAGE_KEYS.CURRENT_MOONPHASE_PIN_ID ) ) {
+    var pin = { "id": localStorage.getItem( MESSAGE_KEYS.CURRENT_MOONPHASE_PIN_ID ) };
+    if (DEBUG) console.log( JSON.stringify( pin ) );
+    timeline.deleteUserPin( pin, function( responseText ) {
+      if (DEBUG) console.log( 'deleteUserPin(): Result: ' + responseText );
+      localStorage.setItem( MESSAGE_KEYS.CURRENT_MOONPHASE_PIN_ID, moonphasePin.id  );
+      if (DEBUG) console.log( "index.js: play(): " + localStorage.getItem( MESSAGE_KEYS.CURRENT_MOONPHASE_PIN_ID ) );
+      timeline.insertUserPin( moonphasePin, function( responseText ) {
+        if (DEBUG) console.log( 'insertUserPin(): Result: ' + responseText );
+      });
+    });
+  // }  
 }
 
 function getAstroInfo() {
@@ -117,7 +114,7 @@ function locationError( err ) {
 Pebble.addEventListener( 'ready', 
                         function(e) {
                           if (DEBUG) console.log( "index.js: addEventListener( ready ): PebbleKit JS ready." );
-                          getLocation();
+                          // getLocation();
                         });
 
 // pin stuff
