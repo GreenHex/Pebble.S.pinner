@@ -25,28 +25,30 @@ function play() {
   dateMoonset.setHours( json.moon_phase.moonset.hour );
   dateMoonset.setMinutes( json.moon_phase.moonset.minute );
   dateMoonset.setDate( dateMoonset.getDate() + 1 );
-  var duration = ( dateMoonset.getTime() - dateMoonrise.getTime() ) / ( 1000 * 60 ) ;
-  
-  if (DEBUG) console.log( "Time: " + date.toISOString() + "Moonrise: " + dateMoonrise.toISOString() + " Moonset: " + dateMoonset.toISOString() );
-  if (DEBUG) console.log( "Duration: " + duration );
+  var duration = ( dateMoonset.getTime() - dateMoonrise.getTime() ) / ( 1000 * 60 ) ; // milliseconds to minutes
 
+  if (DEBUG) console.log( "Time: " + date.toISOString() + " Moonrise: " + dateMoonrise.toISOString() + " Moonset: " + dateMoonset.toISOString() );
+  if (DEBUG) console.log( "Duration: " + duration );
+  var moonRiseHour = ( json.moon_phase.moonrise.hour < 10 ) ? "0" + json.moon_phase.moonrise.hour : json.moon_phase.moonrise.hour;
+  var moonSetHour = ( json.moon_phase.moonset.hour < 10 ) ? "0" + json.moon_phase.moonset.hour : json.moon_phase.moonset.hour;
+  
   var moonPin = {
     "id": "moonphase-pin-98e5c0ff5def9a01-8",
     "time": dateMoonrise.toISOString(),
     "duration" : duration,
     "layout": {
       "type": "sportsPin",
-      "title": json.moon_phase.percentIlluminated + "%",
-      "subtitle": json.moon_phase.ageOfMoon + day[ ( json.moon_phase.ageOfMoon == 1 ) ? 1 : ( json.moon_phase.ageOfMoon ) == 2 ? 2 : ( json.moon_phase.ageOfMoon == 3 ) ? 3 : 0 ],
-      "body": json.moon_phase.phaseofMoon,
-      "tinyIcon": "app://images/RESOURCE_ID_P_MP_S_01",
-      "largeIcon": "app://images/RESOURCE_ID_P_MP_L_14",
+      "title": json.moon_phase.ageOfMoon + day[ ( json.moon_phase.ageOfMoon == 1 ) ? 1 : ( json.moon_phase.ageOfMoon ) == 2 ? 2 : ( json.moon_phase.ageOfMoon == 3 ) ? 3 : 0 ],
+      "subtitle": json.moon_phase.phaseofMoon,
+      "body": json.moon_phase.percentIlluminated + "%",
+      "tinyIcon": "app://images/P_MP_S_01",
+      "largeIcon": "app://images/P_MP_L_14",
       "nameAway": "Rise",
       "nameHome": "Set",
-      "recordAway": json.moon_phase.moonrise.hour + ":" + json.moon_phase.moonrise.minute,
-      "recordHome": json.moon_phase.moonset.hour + ":" + json.moon_phase.moonset.minute,
-      "scoreAway": json.moon_phase.moonrise.hour + json.moon_phase.moonrise.minute,
-      "scoreHome": json.moon_phase.moonset.hour + json.moon_phase.moonset.minute,
+      "recordAway": moonRiseHour + ":" + json.moon_phase.moonrise.minute,
+      "recordHome": moonSetHour + ":" + json.moon_phase.moonset.minute,
+      "scoreAway": moonRiseHour + json.moon_phase.moonrise.minute,
+      "scoreHome": moonSetHour + json.moon_phase.moonset.minute,
       "sportsGameState": "in-game"
     }
   };
