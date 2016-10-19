@@ -1,245 +1,373 @@
-{
-    "author": "The Resetter",
-    "dependencies": {},
-    "keywords": [],
-    "name": "s.pinner",
-    "pebble": {
-        "displayName": "S.pinner",
-        "enableMultiJS": true,
-        "messageKeys": [],
-        "projectType": "native",
-        "resources": {
-            "media": [
-                {
-                    "file": "images/P_MP_S_29.png",
-                    "name": "P_MP_S_29",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_S_24.png",
-                    "name": "P_MP_S_24",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_S_23.png",
-                    "name": "P_MP_S_23",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_S_22.png",
-                    "name": "P_MP_S_22",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_S_16.png",
-                    "name": "P_MP_S_16",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_S_15.png",
-                    "name": "P_MP_S_15",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_S_14.png",
-                    "name": "P_MP_S_14",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_S_09.png",
-                    "name": "P_MP_S_09",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_S_08.png",
-                    "name": "P_MP_S_08",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_S_07.png",
-                    "menuIcon": true,
-                    "name": "P_MP_S_07",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_S_01.png",
-                    "name": "P_MP_S_01",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_S_00.png",
-                    "name": "P_MP_S_00",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_M_29.png",
-                    "name": "P_MP_M_29",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_M_24.png",
-                    "name": "P_MP_M_24",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_M_23.png",
-                    "name": "P_MP_M_23",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_M_22.png",
-                    "name": "P_MP_M_22",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_M_16.png",
-                    "name": "P_MP_M_16",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_M_15.png",
-                    "name": "P_MP_M_15",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_M_14.png",
-                    "name": "P_MP_M_14",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_M_09.png",
-                    "name": "P_MP_M_09",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_M_08.png",
-                    "name": "P_MP_M_08",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_M_07.png",
-                    "name": "P_MP_M_07",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_M_01.png",
-                    "name": "P_MP_M_01",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_M_00.png",
-                    "name": "P_MP_M_00",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_L_29.png",
-                    "name": "P_MP_L_29",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_L_24.png",
-                    "name": "P_MP_L_24",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_L_23.png",
-                    "name": "P_MP_L_23",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_L_22.png",
-                    "name": "P_MP_L_22",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_L_16.png",
-                    "name": "P_MP_L_16",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_L_15.png",
-                    "name": "P_MP_L_15",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_L_14.png",
-                    "name": "P_MP_L_14",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_L_09.png",
-                    "name": "P_MP_L_09",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_L_08.png",
-                    "name": "P_MP_L_08",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_L_07.png",
-                    "name": "P_MP_L_07",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_L_01.png",
-                    "name": "P_MP_L_01",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/P_MP_L_00.png",
-                    "name": "P_MP_L_00",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                }
-            ]
-        },
-        "sdkVersion": "3",
-        "targetPlatforms": [
-            "aplite",
-            "basalt",
-            "diorite",
-            "emery"
-        ],
-        "uuid": "2c1d4327-f66c-4320-a654-345ca4609133",
-        "watchapp": {
-            "watchface": true
-        }
-    },
-    "version": "1.1.0"
+{  
+   "author":"The Resetter",
+   "dependencies":{  
+
+   },
+   "keywords":[  
+
+   ],
+   "name":"s.pinner",
+   "pebble":{  
+      "displayName":"S.pinner",
+      "enableMultiJS":true,
+      "messageKeys":[  
+
+      ],
+      "projectType":"native",
+      "resources":{  
+         "media":[  
+            {  
+               "file":"images/P_MP_S_29.png",
+               "name":"P_MP_S_29",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_S_24.png",
+               "name":"P_MP_S_24",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_S_23.png",
+               "name":"P_MP_S_23",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_S_22.png",
+               "name":"P_MP_S_22",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_S_16.png",
+               "name":"P_MP_S_16",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_S_15.png",
+               "name":"P_MP_S_15",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_S_14.png",
+               "name":"P_MP_S_14",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_S_09.png",
+               "name":"P_MP_S_09",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_S_08.png",
+               "name":"P_MP_S_08",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_S_07.png",
+               "menuIcon":true,
+               "name":"P_MP_S_07",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_S_01.png",
+               "name":"P_MP_S_01",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_S_00.png",
+               "name":"P_MP_S_00",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_M_29.png",
+               "name":"P_MP_M_29",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_M_24.png",
+               "name":"P_MP_M_24",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_M_23.png",
+               "name":"P_MP_M_23",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_M_22.png",
+               "name":"P_MP_M_22",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_M_16.png",
+               "name":"P_MP_M_16",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_M_15.png",
+               "name":"P_MP_M_15",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_M_14.png",
+               "name":"P_MP_M_14",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_M_09.png",
+               "name":"P_MP_M_09",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_M_08.png",
+               "name":"P_MP_M_08",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_M_07.png",
+               "name":"P_MP_M_07",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_M_01.png",
+               "name":"P_MP_M_01",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_M_00.png",
+               "name":"P_MP_M_00",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_L_29.png",
+               "name":"P_MP_L_29",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_L_24.png",
+               "name":"P_MP_L_24",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_L_23.png",
+               "name":"P_MP_L_23",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_L_22.png",
+               "name":"P_MP_L_22",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_L_16.png",
+               "name":"P_MP_L_16",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_L_15.png",
+               "name":"P_MP_L_15",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_L_14.png",
+               "name":"P_MP_L_14",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_L_09.png",
+               "name":"P_MP_L_09",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_L_08.png",
+               "name":"P_MP_L_08",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_L_07.png",
+               "name":"P_MP_L_07",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_L_01.png",
+               "name":"P_MP_L_01",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            },
+            {  
+               "file":"images/P_MP_L_00.png",
+               "name":"P_MP_L_00",
+               "targetPlatforms":null,
+               "type":"bitmap"
+            }
+         ],
+         "publishedMedia":[  
+            {  
+               "name":"MP_00",
+               "id":1,
+               "glance":"P_MP_S_00",
+               "timeline":{  
+                  "tiny":"P_MP_S_00",
+                  "small":"P_MP_M_00",
+                  "large":"P_MP_L_00"
+               }
+            },
+            {  
+               "name":"MP_01",
+               "id":2,
+               "glance":"P_MP_S_01",
+               "timeline":{  
+                  "tiny":"P_MP_S_01",
+                  "small":"P_MP_M_01",
+                  "large":"P_MP_L_01"
+               }
+            },
+            {  
+               "name":"MP_07",
+               "id":3,
+               "glance":"P_MP_S_07",
+               "timeline":{  
+                  "tiny":"P_MP_S_07",
+                  "small":"P_MP_M_07",
+                  "large":"P_MP_L_07"
+               }
+            },
+            {  
+               "name":"MP_08",
+               "id":4,
+               "glance":"P_MP_S_08",
+               "timeline":{  
+                  "tiny":"P_MP_S_08",
+                  "small":"P_MP_M_08",
+                  "large":"P_MP_L_08"
+               }
+            },
+            {  
+               "name":"MP_09",
+               "id":5,
+               "glance":"P_MP_S_09",
+               "timeline":{  
+                  "tiny":"P_MP_S_09",
+                  "small":"P_MP_M_09",
+                  "large":"P_MP_L_09"
+               }
+            },
+            {  
+               "name":"MP_14",
+               "id":6,
+               "glance":"P_MP_S_14",
+               "timeline":{  
+                  "tiny":"P_MP_S_14",
+                  "small":"P_MP_M_14",
+                  "large":"P_MP_L_14"
+               }
+            },
+            {  
+               "name":"MP_15",
+               "id":7,
+               "glance":"P_MP_S_15",
+               "timeline":{  
+                  "tiny":"P_MP_S_15",
+                  "small":"P_MP_M_15",
+                  "large":"P_MP_L_15"
+               }
+            },
+            {  
+               "name":"MP_16",
+               "id":8,
+               "glance":"P_MP_S_16",
+               "timeline":{  
+                  "tiny":"P_MP_S_16",
+                  "small":"P_MP_M_16",
+                  "large":"P_MP_L_16"
+               }
+            },
+            {  
+               "name":"MP_22",
+               "id":9,
+               "glance":"P_MP_S_22",
+               "timeline":{  
+                  "tiny":"P_MP_S_22",
+                  "small":"P_MP_M_22",
+                  "large":"P_MP_L_22"
+               }
+            },
+            {  
+               "name":"MP_23",
+               "id":10,
+               "glance":"P_MP_S_23",
+               "timeline":{  
+                  "tiny":"P_MP_S_23",
+                  "small":"P_MP_M_23",
+                  "large":"P_MP_L_23"
+               }
+            },
+            {  
+               "name":"MP_24",
+               "id":11,
+               "glance":"P_MP_S_24",
+               "timeline":{  
+                  "tiny":"P_MP_S_24",
+                  "small":"P_MP_M_24",
+                  "large":"P_MP_L_24"
+               }
+            },
+            {  
+               "name":"MP_29",
+               "id":12,
+               "glance":"P_MP_S_29",
+               "timeline":{  
+                  "tiny":"P_MP_S_29",
+                  "small":"P_MP_M_29",
+                  "large":"P_MP_L_29"
+               }
+            }
+         ]
+      },
+      "sdkVersion":"3",
+      "targetPlatforms":[  
+         "aplite",
+         "basalt",
+         "diorite",
+         "emery"
+      ],
+      "uuid":"2c1d4327-f66c-4320-a654-345ca4609133",
+      "watchapp":{  
+         "watchface":true
+      }
+   },
+   "version":"1.1.0"
 }
